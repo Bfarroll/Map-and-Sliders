@@ -47,7 +47,14 @@ class ViewController: UIViewController {
         
         let location2d = CLLocationCoordinate2D(latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(long))
         MapView.setCenterCoordinate(location2d, animated: true)
-    
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location2d
+        annotation.title = "Hey"
+        MapView.addAnnotation(annotation)
+        MapView.selectAnnotation(annotation, animated: true)
+        
+        
     }
     
     
